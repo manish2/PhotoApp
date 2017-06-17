@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/write_caption_prompt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/caption_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:layout_alignEnd="@+id/textView5" />
+
+    <Button
+        android:id="@+id/caption_dialog_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/cancel_button_prompt"
+        android:layout_below="@+id/caption_text"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="78dp" />
+
+    <Button
+        android:id="@+id/caption_dialog_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok_button_prompt"
+        android:layout_alignBaseline="@+id/caption_dialog_cancel"
+        android:layout_alignBottom="@+id/caption_dialog_cancel"
+        android:layout_alignEnd="@+id/caption_text" />
+</RelativeLayout>

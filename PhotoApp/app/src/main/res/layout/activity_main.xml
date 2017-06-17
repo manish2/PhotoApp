@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context="com.example.manish.photoapp.Activities.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/large_viewer"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitCenter" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollable_gallery"
+            android:layout_width="300dp"
+            android:layout_height="122dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@+id/large_viewer"
+            android:layout_above="@+id/filter_button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:id="@+id/gallery_pages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="5dp">
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    <ImageButton
+        android:id="@+id/take_picture_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="155dp"
+        android:clickable="true"
+        android:onClick="openCamera"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/scrollable_gallery" />
+
+    <Button
+        android:id="@+id/filter_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openFilterOptionDialog"
+        android:text="@string/filter_prompt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/zoom_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_zoom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="enlargeImage" />
+</RelativeLayout>

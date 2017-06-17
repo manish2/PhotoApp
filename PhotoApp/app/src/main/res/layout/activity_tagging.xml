@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.manish.photoapp.Activities.Tagging">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:id="@+id/large_picture"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag_by_date_prompt"
+        android:onClick="tagByDate"
+        android:layout_marginBottom="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag_by_location_prompt"
+        android:onClick="tagByLocation"
+        android:layout_alignBaseline="@+id/date_button"
+        android:layout_alignBottom="@+id/date_button"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/save_prompt_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_to_save_text"
+        android:layout_above="@+id/location_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp" />
+
+    <Button
+        android:id="@+id/caption_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tagByCaption"
+        android:text="@string/caption_prompt"
+        android:layout_below="@+id/save_prompt_text"
+        android:layout_toStartOf="@+id/location_button"
+        android:layout_marginEnd="10dp" />
+
+</RelativeLayout>

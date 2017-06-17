@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/date_from_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/date_to_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/date_from_field"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:text="@string/date_starting_filter" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/date_from_field"
+        android:layout_marginTop="30dp"
+        android:text="@string/date_ending_filter" />
+
+    <Button
+        android:id="@+id/filter_dialog_ok_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok_button_prompt"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/date_to_field"
+        android:layout_alignEnd="@+id/date_to_field" />
+
+    <Button
+        android:id="@+id/filer_dialog_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/filter_dialog_ok_button"
+        android:layout_marginStart="15dp"
+        android:text="@string/cancel_button_prompt" />
+
+    <TextView
+        android:id="@+id/format_prompter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/format_prompt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
+</RelativeLayout>

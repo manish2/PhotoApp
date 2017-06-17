@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/delete_text_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_image_prompt"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108dp" />
+
+    <Button
+        android:id="@+id/delete_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/delete_prompt"
+        android:layout_below="@+id/delete_text_confirmation"
+        android:layout_toStartOf="@+id/cancel_delete_button"
+        android:layout_marginEnd="19dp" />
+
+    <Button
+        android:id="@+id/cancel_delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_button_prompt"
+        android:layout_alignBaseline="@+id/delete_image_button"
+        android:layout_alignBottom="@+id/delete_image_button"
+        android:layout_alignEnd="@+id/delete_text_confirmation" />
+</RelativeLayout>

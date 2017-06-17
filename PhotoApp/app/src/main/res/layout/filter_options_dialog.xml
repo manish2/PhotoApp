@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/filter_by_date_button"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_by_date_prompt"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/filter_by_location_button"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_by_location_prompt"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/filter_by_date_button"
+        android:layout_alignStart="@+id/filter_by_date_button"
+        android:layout_alignEnd="@+id/filter_by_date_button" />
+
+    <Button
+        android:id="@+id/filter_options_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel_button_prompt"
+        android:layout_marginTop="89dp"
+        android:layout_below="@+id/filter_by_location_button"
+        android:layout_alignEnd="@+id/filter_by_location_button" />
+
+    <Button
+        android:id="@+id/filter_by_caption_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/filter_by_location_button"
+        android:layout_below="@+id/filter_by_location_button"
+        android:layout_marginTop="21dp"
+        android:text="@string/filter_by_caption_prompt"
+        android:layout_alignEnd="@+id/filter_options_cancel_button" />
+</RelativeLayout>
