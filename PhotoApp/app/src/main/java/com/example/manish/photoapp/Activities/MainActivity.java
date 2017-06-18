@@ -123,7 +123,9 @@ public class MainActivity extends AppCompatActivity {
         Cursor cursor = getContentResolver().query(uri, null, null, null, null);
         cursor.moveToFirst();
         int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
-        return cursor.getString(idx);
+        String res = cursor.getString(idx);
+        cursor.close();
+        return res;
     }
     public void enlargeImage(View v) {
         try {
@@ -135,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 Bundle extras = new Bundle();
                 extras.putParcelable("Bitmap", bitmap);
                 i.putExtras(extras);
+                //starts activity
                 startActivity(i);
             }
         }
